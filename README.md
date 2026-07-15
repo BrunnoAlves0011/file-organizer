@@ -44,13 +44,16 @@ Organize automaticamente seus arquivos por tipo, detecte duplicados, acompanhe o
 ```
 FileOrganizer/
 │
-├── app.py
-├── ui/
+├── assets/
 ├── core/
 ├── database/
 ├── logs/
-├── assets/
-└── README.md
+├── tests/
+├── ui/
+├── utils/
+├── app.py
+├── README.md
+└── requirements.txt
 ```
 
 ---
@@ -72,7 +75,7 @@ FileOrganizer/
 Clone o projeto:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/file-organizer.git
+git clone https://github.com/BrunnoAlves0011/file-organizer.git
 ```
 
 Entre na pasta:
@@ -99,9 +102,9 @@ python app.py
 
 ### Versão 1.0
 
-- [x] Organizar por extensão
-- [x] Criar pastas automaticamente
-- [x] Relatório final
+- [ ] Organizar por extensão
+- [ ] Criar pastas automaticamente
+- [ ] Relatório final
 
 ### Versão 2.0
 
@@ -149,18 +152,6 @@ Downloads/
 📁 Planilhas/
     planilha.xlsx
 ```
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas!
-
-1. Faça um Fork
-2. Crie uma Branch
-3. Commit suas alterações
-4. Push
-5. Abra um Pull Request
 
 ---
 
