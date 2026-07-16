@@ -1,16 +1,16 @@
 from pathlib import Path
-from settings import *
+# from settings import *
 
 def listar_arquivos(pasta: str):
-    path_used = pasta
-    caminho = Path(pasta)
+    lt_arquivos: list = []
+    # path_used = pasta
+    lv_caminho = Path(pasta)
 
-    if not caminho.exists():
+    if not lv_caminho.exists():
         raise FileNotFoundError("Pasta não encontrada.")
 
-    for arquivo in caminho.iterdir():
-        if arquivo.is_file():
-            arquivos_lista.append(arquivo)  
+    for lv_arquivo in lv_caminho.iterdir():
+        if lv_arquivo.is_file():
+            lt_arquivos.append(lv_arquivo)  
 
-    # return [arquivo for arquivo in caminho.iterdir() if arquivo.is_file()]
-    return arquivos_lista
+    return lt_arquivos
