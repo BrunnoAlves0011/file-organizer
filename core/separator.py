@@ -4,7 +4,7 @@ def file_separator(arquivos_lista: list):
     lt_extension = []
     for file in arquivos_lista:
         lv_file = str(file).split('.', 2)
-        lt_extension.append(lv_file[1].upper())
+        lt_extension.append(lv_file[1].lower())
 
     lt_extension = list(set(lt_extension))
 
