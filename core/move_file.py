@@ -1,7 +1,7 @@
 import shutil
 from settings import FILE_TYPES
 
-def file_move(arquivos: list, source: str):
+def file_move(arquivos: list, source: str, simula: bool):
     retorno = []
     retorno.append('True')
 

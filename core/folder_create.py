@@ -1,7 +1,7 @@
 from pathlib import Path
 from settings import FILE_TYPES
 
-def create_folders(lt_extension: list, pasta: str):
+def create_folders(lt_extension: list, pasta: str, simula: bool):
 
     for ext in lt_extension:
         if ext in FILE_TYPES:

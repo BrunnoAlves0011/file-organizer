@@ -111,14 +111,14 @@ python app.py
 - [ ] Interface gráfica
 - [ ] Detectar duplicados
 - [ ] Modo Simulação
-- [ ] Histórico
+- [X] Histórico/Geração de Logs
 
 ### Versão 3.0
 
-- [ ] Monitoramento em tempo real
-- [ ] Organização por IA
-- [ ] Perfis personalizados
-- [ ] Atualizações automáticas
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
 
 ---
 
