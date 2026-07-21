@@ -102,9 +102,9 @@ python app.py
 
 ### Versão 1.0
 
-- [ ] Organizar por extensão
-- [ ] Criar pastas automaticamente
-- [ ] Relatório final
+- [X] Organizar por extensão
+- [X] Criar pastas automaticamente
+- [X] Relatório final
 
 ### Versão 2.0
 

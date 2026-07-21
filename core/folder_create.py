@@ -7,7 +7,7 @@ def create_folders(lt_extension: list, pasta: str):
         if ext in FILE_TYPES:
             path = pasta + '\\' + FILE_TYPES[ext]
         else:
-            path = pasta + '\\ Outros'
+            path = pasta + '\\Outros'
         directory_path = Path(path)
         try:
             directory_path.mkdir()
