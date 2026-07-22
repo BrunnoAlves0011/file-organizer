@@ -114,3 +114,7 @@ FILE_TYPES = {
     "lnk" : "Atalho",
     "url" : "Atalho",
 }
+
+# # Variaveis para tela
+# exibir_relatorio: bool = False # checkbox se exibe relátorio
+# simula: bool = False           # checkbox para simular organização

@@ -67,6 +67,7 @@ FileOrganizer/
 - shutil
 - watchdog
 - hashlib
+- custom tkinter
 
 ---
 

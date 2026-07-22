@@ -1,4 +1,6 @@
 from settings import *
+
+# Funções
 from core.scanner import listar_arquivos
 from core.separator import file_separator
 from core.folder_create import create_folders
@@ -6,15 +8,17 @@ from core.move_file import file_move
 from core.relatorio import relatorio_final
 from core.log import gerar_log
 
+# Tela
+from ui.tela_inicial import tela_inicial
+# from ui.tela_report import tela_relatorio
 def main():
-    # Variaveis para tela
-    exibir_relatorio = True # checkbox se exibe relátorio
-    simula = True # checkbox para simular organização
 
-    print("=" * 40)
-    print("📂 FileOrganizer")
-    print("=" * 40)
-    
+    tela_inicial()
+
+    # print("=" * 40)
+    # print("📂 FileOrganizer")
+    # print("=" * 40)
+    return
     try:
         # Caminho da pasta a ser realizado o escaneamento dos arquivos
         pasta = input("Digite o caminho da pasta: ")
