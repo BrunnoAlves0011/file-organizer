@@ -1,7 +1,7 @@
 import datetime
 from pathlib import Path
 
-def gerar_log(arquivos: list, pasta: str):
+def gerar_log(arquivos: list, pasta: str, status: list):
 
     # Pegar data e hora atual
     dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -20,6 +20,15 @@ def gerar_log(arquivos: list, pasta: str):
     # Texto do log
     log = 'Log ' + dt + '\nRealizado na pasta ' + pasta 
 
+    # Informações de execução
+    for statu in status:
+        log = log + statu
+
+    # Caso tenha erro não gravar informações de arquivos
+    if 'Erro' in status:
+        return
+    
+    # Informações dos arquivos
     for arquivo in arquivos:
         if arquivo == 'True':
             continue
@@ -36,4 +45,4 @@ def gerar_log(arquivos: list, pasta: str):
     with file.open("a", encoding="utf-8") as f:
         f.write(log)
 
-    return True
+    return

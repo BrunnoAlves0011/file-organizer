@@ -1,21 +1,27 @@
 import customtkinter
+from core.run import run_organizer
 # from settings import exibir_relatorio, simula
 
 class InputFrame(customtkinter.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
+        self.folder = ''
+
         self.input_text = customtkinter.CTkLabel(self, text="Selecione uma pasta", width=90, height=28)
         self.input_text.grid(row=0, column=0, padx=5, pady=0)
 
         self.input_folder = customtkinter.CTkEntry(self, width=350, height=28)
         self.input_folder.grid(row=0, column=1, padx=5, pady=0, sticky="ew")
+        # self.input_folder.configure(state="disabled")
 
         self.select_folder = customtkinter.CTkButton(self, width=50, text="Procurar", command=self.search_folder)
         self.select_folder.grid(row=0, column=2, padx=0, pady=0, sticky="ew")
 
     def search_folder(self):
-
+        self.input_folder.insert(0, '')
+        self.folder = customtkinter.filedialog.askdirectory()
+        self.input_folder.insert(0, str(self.folder))
         return
 
 # Class Checkbox
@@ -41,7 +47,7 @@ class App(customtkinter.CTk):
 
         # Titulo da guia/janela
         self.title("FileOrganizer")
-        self.iconbitmap()
+        self.iconbitmap('./assets/icon/folder.bmp')
 
         # Tamanho da janela
         self.geometry("575x150")
@@ -70,9 +76,13 @@ class App(customtkinter.CTk):
 
     def file_organizer(self):
         self.checkbox_frame.set_flags()
-        print("exibir_relatorio", self.checkbox_frame.exibir_relatorio)
-        print("simula", self.checkbox_frame.simula)
-
+        if self.input_frame.folder != '':
+            run_organizer(self.input_frame.folder, 
+                          self.checkbox_frame.simula, 
+                          self.checkbox_frame.exibir_relatorio)
+        else:
+            # Exibir mensagem de erro
+            return
 
 def tela_inicial():
     customtkinter.set_default_color_theme('./assets/theme/theme_app.json')        
